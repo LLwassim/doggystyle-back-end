@@ -12,6 +12,22 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/breed/:breed', (req, res) => {
+  DogBreed.find({
+    name: { $regex: req.params.breed, $options: 'i' }
+  }).then(dogBreeds => {
+    res.json(dogBreeds);
+  });
+});
+
+app.get('/temperament/:temperament', (req, res) => {
+  DogBreed.find({
+    temperament: { $regex: req.params.temperament, $options: 'i' }
+  }).then(dogBreeds => {
+    res.json(dogBreeds);
+  });
+});
+
 app.set("port", process.env.PORT || 8080);
 
 app.listen(app.get("port"), () => {
