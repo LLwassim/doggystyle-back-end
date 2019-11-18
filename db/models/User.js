@@ -1,5 +1,5 @@
 const mongoose = require('../db/connection')
-const dogs = require("../models/dogs")
+const Dog = require("../models/Dog")
 const Schema = mongoose.Schema
 
 const user = new Schema ({
