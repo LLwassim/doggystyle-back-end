@@ -2,6 +2,7 @@ const app = require('express')();
 var cors = require('cors');
 const parser = require('body-parser');
 const DogBreed = require('./db/models/DogBreed');
+const Dog = require('./db/models/Dog');
 
 app.use(cors());
 app.use(parser.json());
@@ -25,6 +26,12 @@ app.get('/temperament/:temperament', (req, res) => {
     temperament: { $regex: req.params.temperament, $options: 'i' }
   }).then(dogBreeds => {
     res.json(dogBreeds);
+  });
+});
+
+app.post('/', (req, res) => {
+  Dog.create(req.body).then(dog => {
+    res.json(dog);
   });
 });
 
