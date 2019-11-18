@@ -53,6 +53,13 @@ app.put('/dogs/update/:id', (req, res) => {
   });
 });
 
+// delete dog
+app.delete('/dogs/delete/:id', (req, res) => {
+  Dog.findOneAndDelete({ _id: req.params.id }).then(dog => {
+    res.json(dog);
+  });
+});
+
 app.set("port", process.env.PORT || 8080);
 
 app.listen(app.get("port"), () => {
