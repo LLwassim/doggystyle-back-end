@@ -47,8 +47,8 @@ app.post('/dogs/create', (req, res) => {
 });
 
 // update dog
-app.put('/dogs', (req, res) => {
-  Dog.create(req.body).then(dog => {
+app.put('/dogs/update/:id', (req, res) => {
+  Dog.updateOne({ id: req.params.id }, req.body, { new: true }).then(dog => {
     res.json(dog);
   });
 });
