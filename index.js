@@ -1,5 +1,5 @@
 const app = require('express')();
-var cors = require('cors');
+const cors = require('cors');
 const parser = require('body-parser');
 const DogBreed = require('./db/models/DogBreed');
 const Dog = require('./db/models/Dog');
