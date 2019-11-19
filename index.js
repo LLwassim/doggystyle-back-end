@@ -96,11 +96,6 @@ app.put('/users/update/:id', (req, res) => {
 app.delete('/users/delete/:id', (req, res) => {
   User.findOneAndDelete({ _id: req.params.id }).then(user => {
     res.json(user);
-
-// delete dog
-app.delete('/dogs/delete/:id', (req, res) => {
-  Dog.findOneAndDelete({ _id: req.params.id }).then(dog => {
-    res.json(dog);
   });
 });
 
