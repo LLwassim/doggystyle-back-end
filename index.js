@@ -64,6 +64,8 @@ app.get('/users/:username/:password', (req, res) => {
     res.json(user);
   });
 });
+<<<<<<< HEAD
+=======
 // get user by dog id
 app.get('/users/:dogid', (req, res) => {
   User.find({ dogs: { $elemMatch: { _id: req.params.dogid }}})
@@ -142,9 +144,18 @@ app.delete('/users/delete/:id', (req, res) => {
     res.json(user);
   });
 });
+>>>>>>> c2c8182517fedacf5ebb3732fc41de7e4cb1b604
 
 app.set("port", process.env.PORT || 8080);
 
 app.listen(app.get("port"), () => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+=======
   console.log(`PORT: ${app.get("port")}`);
+>>>>>>> Blake
+=======
+  console.log(`PORT: ${app.get("port")}`);
+>>>>>>> c2c8182517fedacf5ebb3732fc41de7e4cb1b604
 });
