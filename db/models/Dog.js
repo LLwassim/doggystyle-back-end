@@ -2,9 +2,18 @@ const mongoose = require("../connection");
 const DogBreed = require('./DogBreed').schema;
 
 const dogSchema = new mongoose.Schema({
-  petName: String,
-  age: Number,
-  energy_level: String,
+  petName: {
+    type: String,
+    maxlength: 30
+  },
+  age: {
+    type: Number,
+    max: 30
+  },
+  energy_level: {
+    type: Number,
+    max: 6
+  },
   breed: [DogBreed]
 });
 
