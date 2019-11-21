@@ -18,11 +18,11 @@ DogBreed.remove({}).then(() => {
       for (let i = 0; i < res.length; i++) {
         let temperamentArray;
         if (!res[i].temperament) {
-          if (res[i].name = 'Poodle (Toy)') {
+          if (res[i].name === 'Poodle (Toy)') {
             temperamentArray = ['Lively, Playful, Intelligent, Fun-loving, Athletic'];
-          } else if (res[i].name = 'Poodle (Miniature)') {
+          } else if (res[i].name === 'Poodle (Miniature)') {
             temperamentArray = ['Active', 'Intelligent', 'Proud'];
-          } else if (res[i].name = 'Russian (Toy)') {
+          } else if (res[i].name === 'Russian (Toy)') {
             temperamentArray = ['Active', 'Intelligent', 'Cheerful'];
           } else {
             temperamentArray = ['Loyal', 'Intelligent', 'Gentle'];
