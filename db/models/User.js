@@ -1,21 +1,21 @@
-<<<<<<< HEAD
-const mongoose = require('../db/connection')
-const Dog = require("../models/Dog")
-const Schema = mongoose.Schema
+// <<<<<<< HEAD
+// const mongoose = require('../db/connection')
+// const Dog = require("../models/Dog")
+// const Schema = mongoose.Schema
 
-const user = new Schema ({
-    username: String,
-    password: String,
-    email: String,
-    location: String,
-    dogs: [Dog],
+// const user = new Schema ({
+//     username: String,
+//     password: String,
+//     email: String,
+//     location: String,
+//     dogs: [Dog],
     
 
-})
+// })
 
 
-module.exports = mongoose.model('user', user)
-=======
+// module.exports = mongoose.model('user', user)
+// =======
 const mongoose = require("../connection");
 const Dog = require('./Dog').schema;
 
@@ -44,4 +44,3 @@ const userSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("User", userSchema);
->>>>>>> c2c8182517fedacf5ebb3732fc41de7e4cb1b604
