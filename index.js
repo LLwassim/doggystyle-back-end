@@ -7,13 +7,15 @@ const User = require('./db/models/User');
 const passport = require('./config/passport')()
 const userController = require('./controllers/users.js')
 
-
 app.use(cors());
 app.use(parser.json());
-//paswsword login initilization code
+
+//password login initialization code
 app.use(passport.initialize())
+
 //users controller and routes
 app.use('/users', userController)
+
 /* BREEDS routes */
 // get all breeds
 app.get('/breeds', (req, res) => {
